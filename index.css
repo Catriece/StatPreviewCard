@@ -26,11 +26,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /*align-items: center;*/
     width: 75vmin;
     max-width: 375px;
-    max-height: 600px;
-    flex-grow: 0;
+    max-height: 697px;
+    
     margin: auto;
     border-radius: 0 0 8px 8px;
     background-color: var(--primary-dark-desaturated-blue);
@@ -43,13 +43,20 @@ body {
 
 .card-img {
     background-image: url(./images/image-header-mobile.jpg);
-    box-shadow: inset 0 0 0 1000px #9600FF;
+    box-shadow: inset 0 0 0 1000px rgba(155, 0, 255, 0.7);
     width: 100%;
-    height: 55vmin;
-    opacity: 0.7;
+    height: 50vmin;
+    /*opacity: 0.7;*/
     background-size: cover;
     background-position: 100%;
     border-radius: 8px 8px 0 0;
+}
+
+.card-img img {
+    height: 50vmin;
+    width: 100%;
+    min-width: 450px;
+    opacity: 0.8;
 }
 
 .card {
@@ -76,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .major-text {
     font-weight: 700;
-    font-size: 23px;
+    font-size: 24px;
 }
 
 .minor-text {
@@ -95,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding-top: 0;
     text-transform: uppercase;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
     color: var(--neutral-slightly-transparent-white-p);
     
     text-align: center;
@@ -108,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .spacing {
-    line-height: 1.75rem;
+    line-height: 1.5rem;
 }
 
 p {
@@ -133,6 +140,7 @@ p {
 .attribution { 
     font-size: 11px; 
     text-align: center; 
+    color: var(--neutral-white);
 }
 
 .attribution a { 
@@ -140,7 +148,12 @@ p {
 }
 
 @media only screen and (min-width: 900px) {
-
+    .number-boxes {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        padding: 0;
+    }
 
     .container {
         display: flex;
@@ -149,7 +162,6 @@ p {
         align-items: flex-start;
         width: 85%;
         max-width: 700px;
-        flex-grow: 0;
         border-radius: 8px 0 0 8px;
 
     }
@@ -158,16 +170,34 @@ p {
         min-height: 50vmin;
         padding: 0;
         border-radius: 8px 0 0 8px;
+    
+    
     }
 
     .card-img {
         background-image: url(./images/image-header-desktop.jpg);
         min-height: 100%;
         border-radius: 0 8px 8px 0;
+        min-width: 50vmin;
     }
 
     .text-alignment {
         text-align: left;
+    }
+
+   .card-pad {
+        padding-top: 30px;
+        padding-right: 40px;
+        padding-left: 20px;
+       
+    }
+
+    .text-minor, .single-word {
+        padding: 1rem;
+    }
+
+    .major-text {
+        font-size: 26px;
     }
 
 }
